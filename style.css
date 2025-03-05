@@ -1,0 +1,124 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Inter;
+}
+
+.container {
+    min-height: 100vh;
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #c9bee5; /* Light purple color */
+}
+
+.search {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.search-box {
+    padding: 15px;
+    height: 60px;
+    flex: 1;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    background-color: #f5f5f5;
+    color: #333;
+    outline: none;
+}
+
+.search-box::placeholder {
+    color: #999;
+}
+
+.mktCapSort,
+.percentSort {
+    padding: 15px 30px;
+    height: 60px;
+    min-width: 180px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.mktCapSort:hover,
+.percentSort:hover {
+    background-color: #45a049;
+}
+
+.mktCapSort:active,
+.percentSort:active {
+    background-color: #4CAF50;
+    transform: scale(0.95);
+}
+
+.data-container {
+    flex: 10;
+    padding: 20px;
+    color: white;
+    font-size: 14px;
+    background-color: #1a1a1c;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    transition: background-color 0.3s ease; /* Add transition effect */
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #555;
+}
+
+tr:hover td { /* Apply hovering effect only to table cells */
+    background-color: #777;
+}
+
+td:first-child {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+td:first-child img {
+    height: 20px;
+    width: auto;
+}
+
+td:first-child span {
+    font-size: 14px;
+}
+
+.td-green {
+    color: green; /* Color for positive percentage */
+}
+
+.td-red {
+    color: red; /* Color for negative percentage */
+}
